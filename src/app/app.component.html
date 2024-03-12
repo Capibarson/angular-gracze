@@ -1,0 +1,78 @@
+<label>
+  Podaj imie:
+  <input id="playerName" required [(ngModel)]="name" />
+</label>
+<label>
+  Podaj nazwisko:
+  <input id="playerSurname" required [(ngModel)]="surname" />
+</label>
+<label>
+  Podaj nick w grze:
+  <input id="playerNick" required [(ngModel)]="nick" />
+</label>
+<select id="selectedGame" required [(ngModel)]="game">
+  <option value="CS2">Counter strike 2</option>
+  <option value="Archero">Archero</option>
+  <option value="Ligi Legend">Liga legend</option>
+</select>
+<button (click)="test()">Dodaj</button>
+
+<h1>Gracze Counter Strike 2</h1>
+<table>
+  <thead>
+    <tr>
+      <td>LP.</td>
+      <td>Imię</td>
+      <td>Nazwisko</td>
+      <td>Nick</td>
+    </tr>
+  </thead>
+  <tbody *ngFor="let player of playersCS">
+    <tr>
+      <td>{{ player.id }}</td>
+      <td>{{ player.name }}</td>
+      <td>{{ player.surname }}</td>
+      <td>{{ player.nick }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Gracze Archero</h1>
+<table>
+  <thead>
+    <tr>
+      <td>LP.</td>
+      <td>Imię</td>
+      <td>Nazwisko</td>
+      <td>Nick</td>
+    </tr>
+  </thead>
+  <tbody *ngFor="let player of playersArchero">
+    <tr>
+      <td>{{ player.id }}</td>
+      <td>{{ player.name }}</td>
+      <td>{{ player.surname }}</td>
+      <td>{{ player.nick }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Gracze Ligi Legend</h1>
+<table>
+  <thead>
+    <tr>
+      <td>LP.</td>
+      <td>Imię</td>
+      <td>Nazwisko</td>
+      <td>Nick</td>
+    </tr>
+  </thead>
+  <tbody *ngFor="let player of playersLOL">
+    <tr>
+      <td>{{ player.id }}</td>
+      <td>{{ player.name }}</td>
+      <td>{{ player.surname }}</td>
+      <td>{{ player.nick }}</td>
+    </tr>
+  </tbody>
+</table>
